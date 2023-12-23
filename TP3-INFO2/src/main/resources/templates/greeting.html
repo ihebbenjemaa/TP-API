@@ -1,0 +1,22 @@
+<!-- src/main/resources/templates/greeting.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Accueil</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Ajoutez le lien vers le fichier CSS Bootstrap 4.0 -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+<!-- Inclusion du fragment navbar.html -->
+<div th:replace="fragment/navbar"></div>
+
+<!-- Contenu spécifique de la page greeting -->
+<div class="container mt-3">
+    <h1 class="display-4">Bonjour <span th:text="${nomTemplate}"></span> !</h1>
+    <!-- Autres éléments de la page -->
+</div>
+<script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

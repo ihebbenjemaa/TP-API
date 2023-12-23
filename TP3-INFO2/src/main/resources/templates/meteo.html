@@ -1,0 +1,21 @@
+<!-- src/main/resources/templates/meteo.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Météo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+<div th:replace="fragment/navbar"></div>
+
+<!-- Affichage des détails de l'adresse -->
+<h2>Détails de l'adresse :</h2>
+<!--/*@thymesVar id="response" type="TP3INFO2"*/-->
+<div th:text="${response}"></div>
+<div>
+    <p>Coordonnées GPS : <!--/*@thymesVar id="coordinates" type="TP3INFO2"*/-->
+        <span th:text="${coordinates}"></span></p>
+</div>
+</body>
+</html>
